@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Salkhorde | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Hero -->
+    <header>
+        <img src="images/profile.jpg" alt="Ali Reza Azimi" class="profile-img">
+        <h1>Hi, I'm Mohammad 👋</h1>
+        <p>Python / Django Backend Developer | REST APIs & E-commerce | Open to freelance & remote work</p>
+        <div class="social-links">
+            <a href="https://github.com/MohammadSalkhorde" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/mohammad-salkhorde-a13767385" target="_blank">LinkedIn</a>
+            <a href="mailto:m.salkhorde444@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a professional Python/Django backend developer with experience building REST APIs and e-commerce platforms. I have multiple international certificates from Academy Dersman and Harvard University. Currently learning Full-Stack frontend development (React) to become a complete full-stack developer.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="projects/ecommerce.png" alt="E-commerce Project">
+            <h3>E-commerce Django</h3>
+            <p>Full shop with authentication, product CRUD, cart & checkout demo.</p>
+            <a href="https://github.com/USERNAME/ecommerce-django" target="_blank">GitHub</a>
+            <a href="#">Live Demo</a>
+        </div>
+        <div class="project-card">
+            <img src="projects/task-api.png" alt="Task API Project">
+            <h3>Task Manager API</h3>
+            <p>REST API with Django REST Framework, JWT authentication, and Docker deployment.</p>
+            <a href="https://github.com/USERNAME/task-api" target="_blank">GitHub</a>
+            <a href="#">Live Demo</a>
+        </div>
+        <!-- Add more projects here -->
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="images/certificates/python-darsman.jpg" alt="Python Backend Developer" onclick="openModal(this)">
+                <p>Advanced Python Certificate <br> <b>Academy Dersman</b></p>
+            </div>
+            <div class="cert-card">
+                <img src="images/certificates/django-darsman.jpg" alt="Django Web Development" onclick="openModal(this)">
+                <p>Advanced Django Certificate <br> <b>Academy Dersman</b></p>
+            </div>
+            <!-- <div class="cert-card">
+                <img src="images/certificates/fullstack_project.jpg" alt="Full-Stack Project Implementation" onclick="openModal(this)">
+                <p>Full-Stack Project Implementation — Academy Dersman</p>
+            </div> -->
+            <div class="cert-card">
+                <img src="images/certificates/cs50p.jpg" alt="Python Programming" onclick="openModal(this)">
+                <p>Python Programming Certificate <br> <b>Harvard University</b></p>
+            </div>
+            <div class="cert-card">
+                <img src="images/certificates/cs50x.jpg" alt="Computer Science Fundamentals" onclick="openModal(this)">
+                <p>Computer Science Fundamentals Certificate <br> <b>Harvard University</b></p>
+            </div>
+            <div class="cert-card">
+                <img src="images/certificates/typing.jpg" alt="10-Finger Typing Certificate" onclick="openModal(this)">
+                <p>10-Finger Typing Certificate <br> <b>Typo Institute</b></p>
+            </div>
+            <!-- مدرک جدید اضافه می‌کنید فقط یه div با class="cert-card" اضافه کنید -->
+        </div>
+    </section>
+
+    <!-- Modal for Images -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach me via email or LinkedIn.</p>
+        <a href="mailto:m.salkhorde444@gmail.com">m.salkhorde444@gmail.com</a> | 
+        <a href="https://www.linkedin.com/in/mohammad-salkhorde-a13767385" target="_blank">LinkedIn</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Mohammad Salkhorde. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function openModal(img) {
+    document.getElementById("imgModal").style.display = "block";
+    document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+}
+
+</script>
