@@ -1,0 +1,22 @@
+<section class="about ptb-100" id="about">
+  <div class="container">
+    <div class="about-inner d-flex">
+      <div class="about-col-left">
+        <img src="{{ media }}{{about.image_name}}"  style="height: 100%; width: 100%; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" alt="about" />
+      </div>
+      {% comment %} <div class="about-col-left">
+        <img src="{{ media }}/images/about-img.jpg" alt="about" />
+      </div> {% endcomment %}
+      <div class="about-col-right">
+        <h2 class="about-heading">About Me</h2>
+        <h3 class="about2">{{about.title}}</h3>
+        <p class="about3">{{about.description}}</p>
+        <div class="about-btn-blk">
+            <a href="{{ about.resume.url }}" class="btn btn-blue about-btn" download>
+                Download Resume
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

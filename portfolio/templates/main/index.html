@@ -1,0 +1,277 @@
+{% extends "main_template.html" %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+
+   <!-- Header -->
+    {% include "partials/header.html" %}
+
+    <main>
+        <!-- Hero section -->
+        {% render_partial "main:hero-section" %}
+
+        <!-- features -->
+        {% comment %} <section class="features">
+            <div class="container">
+                <div class="features-inner d-grid">
+                    <div class="feature-item d-flex">
+                        <div class="icon d-flex color1">
+                            <img src="{{media}}/images/experience.svg" alt="experience">
+                        </div>
+                        <div>
+                            <h3>5+</h3>
+                            <p>تجربه</p>
+                        </div>
+                    </div>
+                    <div class="feature-item d-flex">
+                        <div class="icon d-flex color2">
+                            <img src="{{media}}/images/happy-clients.svg" alt="happy clients ">
+                        </div>
+                        <div>
+                            <h3>73</h3>
+                            <p>مشتریان راضی</p>
+                        </div>
+                    </div>
+                    <div class="feature-item d-flex">
+                        <div class="icon d-flex color3">
+                            <img src="{{media}}/images/projects-completed.svg" alt="happy clients ">
+                        </div>
+                        <div>
+                            <h3>120+</h3>
+                            <p>پروژه های موفق</p>
+                        </div>
+                    </div>
+                    <div class="feature-item d-flex">
+                        <div class="icon d-flex  color4">
+                            <img src="{{media}}/images/awards-won.svg" alt="awards ">
+                        </div>
+                        <div>
+                            <h3>10+</h3>
+                            <p>جایزه ها</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- About -->
+        {% render_partial "main:about-section" %}
+        
+        <!-- Experience -->
+        
+        {% render_partial "main:experience-section" %}
+        
+        <!-- Services -->
+        
+        {% render_partial "main:services-section" %}
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-inner d-flex">
+                    <div class="cta-content">
+                    <h3>Got a project in mind?</h3>
+                    <p>
+                        I’m always open to discussing new ideas, creative collaborations, or potential projects.
+                        Let’s turn your vision into reality together.
+                    </p>
+                    </div>
+                    <a href="#contact" class="btn btn-default">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        <!-- projects -->
+        <section class="projects ptb-100" id="portfolio">
+            <div class="container">
+                <h2>Recent Projects</h2>
+                <div class="projects-inner d-grid">
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/1.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/2.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">مشاهده </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/3.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">مشاهده </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/4.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">مشاهده </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/5.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">مشاهده </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="{{media}}/images/projects/6.jpg" alt="project image">
+                        </div>
+                        <div class="project-content">
+                            <h3>نام پروژه</h3>
+                            <div class="project-view d-flex">
+                                <span>تکنولوژی استفاده شده</span>
+                                <a href="javascript:void(0)" class="btn-view">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-block">
+                    <a href="#" class="btn btn-outline">View More</a>
+                </div>
+            </div>
+        </section>
+        <!-- Testmonial -->
+        <section class="testmonial">
+            <div class="container">
+                <div class="testmonial-inner">
+                    <h2>Happy Clients</h2>
+                    <div class="testmonial-slider owl-carousel owl-theme">
+                        <!-- item -->
+                        <div class="testmonial-item">
+                            <h3>نام پروژه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <div class="client-data d-flex">
+                                <img src="{{media}}/images/client-1.png" alt="client thumb">
+                                <h4>نام مشتری
+                                    <br> <span>سمت مشتری</span>
+                                </h4>
+
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="testmonial-item">
+                            <h3>نام پروژه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <div class="client-data d-flex">
+                                <img src="{{media}}/images/client-2.png" alt="client thumb">
+                                <h4>نام مشتری
+                                    <br> <span>سمت مشتری</span>
+                                </h4>
+
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="testmonial-item">
+                            <h3>نام پروژه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <div class="client-data d-flex">
+                                <img src="{{media}}/images/client-1.png" alt="client thumb">
+                                <h4>نام مشتری
+                                    <br> <span>سمت مشتری</span>
+                                </h4>
+
+                            </div>
+                        </div>
+                        <div class="testmonial-item">
+                            <h3>نام پروژه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <div class="client-data d-flex">
+                                <img src="{{media}}/images/client-2.png" alt="client thumb">
+                                <h4>نام مشتری
+                                    <br> <span>سمت مشتری</span>
+                                </h4>
+
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="testmonial-item">
+                            <h3>نام پروژه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <div class="client-data d-flex">
+                                <img src="{{media}}/images/client-1.png" alt="client thumb">
+                                <h4>نام مشتری
+                                    <br> <span>سمت مشتری</span>
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Contact Me -->
+        {% render_partial "main:contact" %}
+    </main>
+    <!-- Footer -->
+    {% include "partials/footer.html" %}
+
+    <!-- Project view modal -->
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-image">
+                <img src="{{media}}/images/projects/1.jpg" alt="image">
+            </div>
+            <div class="modal-content">
+
+                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h3>
+                <p class="requirments">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>
+
+                <ul>
+                    <li><span>مهارت ها:-</span> HTML, CSS, BOOTSTRAP 4, JAVASCRIPT, FIGMA, PHOTOSHOP</li>
+                    <li><span>زمان اتمام پروژه:-</span>15 days</li>
+                    <li><span>آدرس پروژه:-</span> <a
+                            href="https://netcopy.ir">https://netcopy.ir</a>
+                    </li>
+                </ul>
+
+                <div class="close-btn">
+                    <a href="javascript:void(0)" class="btn btn-blue close-modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll up -->
+    <a href="javascript:void(0)" class="scrollup">
+        <img src="{{media}}/images/uparrow.svg" alt="arrow up">
+    </a>
+
+{% endblock content %}

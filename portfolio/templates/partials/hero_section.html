@@ -1,0 +1,45 @@
+<section class="hero-section" id="home">
+  <div class="container">
+    <div class="hero-inner d-flex">
+      <div class="col-left">
+        {% comment %} <span class="sub-heading">سلام</span> {% endcomment %}
+        <h1 class="heading" style="font-size: 40px;">
+           {{hs.title}}
+        </h1>
+        <h4 class="heading2" style="font-weight: bold;">{{hs.subtitle}}</h4>
+        <p class="paragraph">{{hs.description}}</p>
+        <div class="btn-blk">
+          <a href="#contact" class="btn btn-blue">Let's Talk</a>
+          <a href="#portfolio" class="btn btn-black">View My Projects</a>
+        </div>
+        <div class="social">
+        <ul>
+            <li class="social-icon">
+                <a href="https://www.instagram.com/md80b" target="_blank">
+                    <img src="{{ media }}/images/social-icons/feather_instagram.svg" alt="Instagram" />
+                </a>
+            </li>
+            <li class="social-icon">
+                <a href="https://www.linkedin.com/in/mohammad-salkhorde-a13767385" target="_blank">
+                    <img src="{{ media }}/images/social-icons/feather_linkedin.svg" alt="LinkedIn" />
+                </a>
+            </li>
+            <li class="social-icon">
+                <a href="https://github.com/MohammadSalkhorde" target="_blank">
+                    <img src="{{ media }}/images/social-icons/feather_github.svg" alt="GitHub" />
+                </a>
+            </li>
+        </ul>
+
+        </div>
+      </div>
+      <div class="col-right">
+        <img class="image-main" src="{{ media }}/images/thumbnail-1.png" alt="user image" />
+<img class="image-darkmode" 
+     src="{{ media }}{{hs.image_name}}" 
+     style="height: 100%; width: 100%; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" 
+     alt="user image" />
+      </div>
+    </div>
+  </div>
+</section>

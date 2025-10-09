@@ -1,0 +1,36 @@
+<section class="contact ptb-100" id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="basic-form" action="{% url 'main:contact' %}" method="post">
+            {% csrf_token %}
+            <div class="contact-inner d-flex">
+                <div class="input-block form-item">
+                    <label for="">First Name</label>
+                    {{ i.name }}
+                </div>
+                <div class="input-block form-item">
+                    <label for="">Last Name</label>
+                    {{ i.family }}
+                </div>
+                <div class="input-block form-item">
+                    <label for="">Email</label>
+                    {{ i.email }}
+                </div>
+                <div class="input-block form-item">
+                    <label for="">Phone Number</label>
+                    {{ i.phone_number }}
+                </div>
+
+                <div class="textarea form-item">
+                    <label for="">Your Message</label>
+                    {{ i.text }}
+                </div>
+                <div class="submit-btn form-item">
+                    <button type="submit" value="submit" class="btn btn-blue">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

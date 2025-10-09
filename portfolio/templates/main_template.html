@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad's Portfolio</title>
+    <link rel="icon" type="image/png" href="{{media}}/images/Mohammad_Salkhorde-removebg-preview.png" sizes="16x16">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.green.css' %}">
+
+</head>
+
+<body class="darkmode rtl">
+{% block content %}{% endblock content %}
+</class=>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js"></script>
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="{% static 'js/validate.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $("#basic-form").validate();
+    });
+</script>
+<script>
+  // تم پیش‌فرض دارک — بدون فلیکر در لحظه‌ی لود
+  (function() {
+    const savedTheme = localStorage.getItem('site_theme');
+    if (savedTheme === 'dark' || !savedTheme) {
+      document.documentElement.classList.add('darkmode');
+    }
+  })();
+</script>
+
+</html>

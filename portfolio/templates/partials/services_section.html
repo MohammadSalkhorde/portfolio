@@ -1,0 +1,18 @@
+<section class="services ptb-100" id="services">
+  <div class="container">
+    <h2>My Services</h2>
+    <div class="services-inner d-grid">
+      {% for item in services %}
+      <div class="services-block">
+        <div class="service-icon color1 d-flex">
+          <img src="{{ media }}/images/services/ui-design.svg" alt="service icon" />
+        </div>
+        <h3>{{ item.title }}</h3>
+        {% autoescape off %}
+        <p>{{ item.description }}</p>
+        {% endautoescape %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

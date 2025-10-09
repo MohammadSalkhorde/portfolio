@@ -1,0 +1,19 @@
+<section class="experience ptb-100">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="experience-inner d-grid">
+      <!-- item -->
+       {% for item in experience %}
+        <div class="progressbar-item">
+            <div class="progressbar-content d-flex">
+            <h3>{{item.title}}</h3>
+            <h4>{{item.proficiency}}%</h4>
+            </div>
+            <div class="progessbar-bg">
+            <div class="progressbar-size" style="width:{{item.proficiency}}%"></div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
