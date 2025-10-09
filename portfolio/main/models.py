@@ -72,3 +72,19 @@ class Contact(models.Model):
         verbose_name='پیام'                
         verbose_name_plural="پیام ها"
 #=================================================================================
+class Projects(models.Model):
+    project_name=models.CharField(max_length=100,verbose_name='نام پروژه')
+    upload_file=UploadFile('images','projects')
+    image_name=models.ImageField(verbose_name='تصویر',upload_to=upload_file.upload_to,null=True,blank=True) 
+    summery_description=models.TextField(verbose_name='خلاصه توضیحات')
+    description=models.TextField(verbose_name='توضیحات')
+    technologies=models.TextField(verbose_name='فناوری ها')
+    project_address=models.URLField(verbose_name='آدرس پروژه')
+
+    def __str__(self):
+        return self.project_name
+    
+    class Meta:
+        verbose_name='پروژه'                
+        verbose_name_plural="پروژه ها"
+#=================================================================================

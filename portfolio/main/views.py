@@ -51,3 +51,7 @@ class ContactView(View):
 
         messages.error(request,'اطلاعات وارد شده نامعتبر میباشد','danger')
         return render(request,'partials/contact.html',{'i':form})
+    
+def get_all_projects(request):
+    projects=Projects.objects.all()
+    return render(request,'partials/projects.html',{'projects':projects})

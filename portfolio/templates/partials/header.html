@@ -30,10 +30,10 @@
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact Me</a></li>
                         <li class="darkmode-btn d-desktop">
-                            {% comment %} <a href="javascript:void(0)">
+                             <a href="javascript:void(0)">
                                 <img src="{{ media }}/images/brightness.svg" alt="Light Mode" class="bright">
                                 <img src="{{ media }}/images/moon.svg" alt="Dark Mode" class="dark">
-                            </a> {% endcomment %}
+                            </a> 
                         </li>
                     </ul>
                 </div>
@@ -43,4 +43,12 @@
             </nav>
         </div>
 </header>
+
+<style>
+/* وقتی منوی موبایل باز است */
+nav .navigation-bar.show {
+    margin-top: 85px; /* ارتفاع هدر، منو دقیقا زیر هدر قرار می‌گیرد */
+}
+
+</style>
 

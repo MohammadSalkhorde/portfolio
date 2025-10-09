@@ -161,3 +161,37 @@ ScrollReveal().reveal('.btn-outline', { delay: 200 });
 ScrollReveal().reveal('.testmonial-slider');
 // Contact form
 ScrollReveal().reveal('.contact-inner');
+
+
+
+
+$(document).ready(function () {
+  // وقتی روی View کلیک شد
+  $('.btn-view').on('click', function () {
+    // اطلاعات از attributeها خونده میشه
+    const title = $(this).data('title');
+    const description = $(this).data('description');
+    const tech = $(this).data('tech');
+    const link = $(this).data('link');
+    const image = $(this).data('image');
+
+    console.log(title, description, tech, link, image); // تست کن که ببینی داره داده میاره یا نه
+
+    // پر کردن محتوا در مودال
+    $('.modal-container .modal-content h3').text(title);
+    $('.modal-container .modal-content .requirments').text(description);
+    $('.modal-container .modal-content .tech').text(tech);
+    $('.modal-container .modal-content .project-link')
+      .attr('href', link)
+      .text(link);
+    $('.modal-container .modal-image img').attr('src', image);
+
+    // نمایش مودال
+    $('.modal-container').addClass('active');
+  });
+
+  // بستن مودال
+  $('.close-modal').on('click', function () {
+    $('.modal-container').removeClass('active');
+  });
+});

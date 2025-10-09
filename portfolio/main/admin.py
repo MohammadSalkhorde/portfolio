@@ -21,3 +21,7 @@ class ServiceSectionAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
     list_display=['name','family','text','register_date','is_answered',]
     ordering=['is_answered','register_date']
+    
+@admin.register(Projects)
+class ProjectsAdmin(admin.ModelAdmin):
+    list_display=['project_name','summery_description','technologies','project_address',]

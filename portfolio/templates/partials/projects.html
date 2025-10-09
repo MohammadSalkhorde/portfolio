@@ -1,0 +1,52 @@
+<section class="projects ptb-100" id="portfolio">
+    <div class="container">
+        <h2>Recent Projects</h2>
+        <div class="projects-inner d-grid">
+            {% for i in projects %}
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="{{media}}{{i.image_name}}" alt="project image">
+                    </div>
+                    <div class="project-content">
+                        <h3>{{i.project_name}}</h3>
+                        <div class="project-view d-flex">
+                            <span>{{ i.summery_description }}</span>
+                            <a href="javascript:void(0)" 
+                               class="btn-view"
+                               data-title="{{ i.project_name }}"
+                               data-description="{{ i.description }}"
+                               data-tech="{{ i.technologies }}"
+                               data-link="{{ i.project_address }}"
+                               data-image="{{media}}{{i.image_name}}">
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="view-more-block">
+            <a href="#" class="btn btn-outline">View More</a>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal-container">
+  <div class="modal">
+    <div class="modal-image">
+      <img src="" alt="image">
+    </div>
+    <div class="modal-content">
+      <h3></h3>
+      <p class="requirments"></p>
+      <ul>
+        <li><span>Technologies:</span> <span class="tech"></span></li>
+        <li><span>Project Link:</span> <a href="#" class="project-link" target="_blank"></a></li>
+      </ul>
+      <div class="close-btn">
+        <a href="javascript:void(0)" class="btn btn-blue close-modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div>

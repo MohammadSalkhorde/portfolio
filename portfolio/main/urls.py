@@ -9,4 +9,5 @@ urlpatterns = [
     path('experience-section/', render_experience_section,name='experience-section'),
     path('services-section/', render_services_section,name='services-section'),
     path('contact/', ContactView.as_view(),name='contact'),
+    path('projects/', get_all_projects,name='projects'),
 ]
