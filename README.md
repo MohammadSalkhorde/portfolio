@@ -60,8 +60,8 @@ Built with **Django**, **HTML/CSS/JS**, and modern front-end libraries, it is re
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/MohammadSalkhorde/portfolio_website.git
-cd portfolio_website
+git clone https://github.com/MohammadSalkhorde/portfolio.git
+cd portfolio
 ```
 
 ### 2️⃣ Create and activate a virtual environment
