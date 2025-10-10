@@ -102,20 +102,21 @@ python manage.py runserver
 ## 📁 Project Structure
 
 ```
-shop_project/
+portfolio/
 │
-├── shop/                 
-│   ├── main/             
+├── portfolio/                 
+│   ├── main/  
+|   ├── portfolio/           
 │   ├── static/           
 │   ├── media/            
-│   ├── templates/                
+│   ├── templates/  
+|   ├── requirements.txt                 
 │   └── manage.py  
 │
 ├── venv/                 
 ├── .gitignore            
-├── README.md             
-├── .env.example          
-└── requirements.txt      
+├── README.md                   
+└── .env.example        
 
 ```
 
