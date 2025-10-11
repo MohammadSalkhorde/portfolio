@@ -20,17 +20,9 @@
                     </svg>
                 </div>
             </a>
-            
+
             <div class="navigation-bar">
                 <ul id="nav">
-                    <li class="darkmode-btn d-mobile">
-                        <a href="javascript:void(0)">
-                            <img src="{{media}}/images/brightness.svg" alt="brightness" class="bright">
-                            <img src="{{media}}/images/moon.svg" alt="moon" class="dark">
-                        </a>
-                    </li>
-                    <br>
-                    <hr>
                     <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#services">Services</a></li>
@@ -44,6 +36,12 @@
                         </a> 
                     </li>
                     <!-- دکمه موبایل -->
+                    <li class="darkmode-btn d-mobile">
+                        <a href="javascript:void(0)">
+                            <img src="{{media}}/images/brightness.svg" alt="brightness" class="bright">
+                            <img src="{{media}}/images/moon.svg" alt="moon" class="dark">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -69,25 +67,37 @@ nav .navigation-bar.show {
         display: none; /* روی موبایل مخفی شود */
     }
 }
-/* سبک مشترک برای آیتم‌های منوی موبایل */
-.navigation-bar ul#nav li {
-    list-style: none;
-    padding: 10px 20px; /* فاصله داخلی آیتم‌ها */
-    text-align: left;
+
+/* وقتی منوی موبایل باز است */
+nav .navigation-bar.show {
+    margin-top: 85px; /* ارتفاع هدر، منو دقیقا زیر هدر قرار می‌گیرد */
 }
 
-/* دکمه تم شب/روز موبایل */
-.darkmode-btn.d-mobile a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* مثل لینک‌های دیگر منو */
-    padding: 10px 0; /* فاصله داخلی مناسب */
+/* دکمه دسکتاپ */
+.darkmode-btn.d-desktop a img {
+    width: 22px;   /* بزرگ‌تر شد */
+    height: 22px;
 }
 
-.darkmode-btn.d-mobile img {
-    width: 24px; /* اندازه آیکون */
-    height: 24px;
-    margin-right: 10px; /* فاصله از متن یا کناره‌ها */
+/* دکمه موبایل */
+.darkmode-btn.d-mobile {
+    display: none; /* پیش‌فرض روی دسکتاپ مخفی است */
+}
+
+@media (max-width: 991px) { /* موبایل */
+    .darkmode-btn.d-mobile {
+        display: flex; /* داخل منو */
+        align-items: center;
+        padding: 12px 20px; /* فاصله داخلی */
+    }
+    .darkmode-btn.d-desktop {
+        display: none; /* روی موبایل مخفی شود */
+    }
+    .darkmode-btn.d-mobile a img {
+        width: 22px;   /* بزرگ‌تر شد */
+        height: 22px;
+        margin-right: 12px;
+    }
 }
 
 </style>
