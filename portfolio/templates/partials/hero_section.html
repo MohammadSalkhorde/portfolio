@@ -3,9 +3,20 @@
     <div class="hero-inner d-flex">
       <div class="col-left">
         {% comment %} <span class="sub-heading">سلام</span> {% endcomment %}
-        <h1 class="heading" style="font-size: 40px;">
-           {{hs.title}}
+        <h1 class="heading" style="
+          font-size: 40px;
+          font-weight: 800;
+          white-space: nowrap;
+          line-height: 1.2;
+          word-spacing: 3px;
+          letter-spacing: 1px;
+          margin-top: 40px;   /* فاصله از بالا */
+          margin-bottom: 20px; /* 👈 فاصله از زیرتایتل */
+        ">
+          {{hs.title}}
         </h1>
+
+
         <h4 class="heading2" style="font-weight: bold;">{{hs.subtitle}}</h4>
         <p class="paragraph">{{hs.description}}</p>
         <div class="btn-blk">
@@ -43,3 +54,17 @@
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    .heading {
+      white-space: normal !important;
+      font-size: 28px !important;
+      margin-top: 40px !important; /* فاصله فقط برای موبایل */
+      margin-bottom: 20px !important; /* فقط دسکتاپ */
+    }
+  }
+
+</style>
+
+
