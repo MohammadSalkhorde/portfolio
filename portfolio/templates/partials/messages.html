@@ -1,0 +1,74 @@
+{% if messages %}
+<div class="messages-container">
+  {% for message in messages %}
+    <div class="alert {{ message.tags }}">
+      {{ message }}
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<style>
+/* 📌 کانتینر پیام‌ها */
+.messages-container {
+    position: fixed; /* بالا و قابل دید */
+    top: 100px; /* فاصله از بالای صفحه (زیر هدر) */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* فاصله بین پیام‌ها */
+}
+
+/* ✉️ استایل پایه هر پیام */
+.alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: slideDownFade 0.5s ease forwards, slideUpFade 0.5s ease 4.5s forwards;
+    box-sizing: border-box;
+    word-break: break-word; /* جلوگیری از overflow متن طولانی */
+}
+
+/* ✅ پیام موفقیت */
+.alert.success { background-color: #28a745; }
+
+/* ⚠️ پیام خطا */
+.alert.error, .alert.danger { background-color: #dc3545; }
+
+/* ⚡ هشدار */
+.alert.warning { background-color: #ffc107; color: #222; }
+
+/* ℹ️ اطلاع */
+.alert.info { background-color: #17a2b8; }
+
+/* ✨ افکت ورود و خروج */
+@keyframes slideDownFade {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFade {
+    to { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 📱 بهینه‌سازی برای موبایل */
+@media (max-width: 767px) {
+    .messages-container {
+        top: 80px; /* بالاتر از هدر موبایل */
+        width: 95%;
+    }
+    .alert {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+}
+</style>

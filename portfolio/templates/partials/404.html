@@ -1,0 +1,57 @@
+<!-- partials/404.html -->
+<div class="not-found-page">
+    <div class="container text-center">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Oops! Page Not Found</h2>
+        <p class="error-message">
+            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        </p>
+        <a href="{% url 'main:index' %}" class="btn btn-primary mt-3">Go Back Home</a>
+    </div>
+</div>
+
+<style>
+.not-found-page {
+    min-height: 70vh; /* ارتفاع مناسب */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.not-found-page .error-code {
+    font-size: 120px;
+    font-weight: 900;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.not-found-page .error-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.not-found-page .error-message {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.not-found-page .btn-primary {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.not-found-page .btn-primary:hover {
+    background-color: #218838;
+    color: #fff;
+}
+</style>

@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7uq0m)s7cjcj7swve*v9ontau)0=#hul8v#1ilgaj2_l0j5*gg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -135,3 +135,12 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media/')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.mohammad-salkhorde.ir'   # سرور ایمیل هاست
+EMAIL_PORT = 465                      # SSL
+EMAIL_USE_SSL = True                  # SSL فعال باشد
+EMAIL_HOST_USER = 'info@mohammad-salkhorde.ir'  # ایمیل کامل
+EMAIL_HOST_PASSWORD = 'Mohammad12086761@'        # رمز ایمیل
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

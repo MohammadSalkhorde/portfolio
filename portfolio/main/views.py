@@ -5,13 +5,14 @@ from django.views import View
 from .forms import *
 from django.contrib import messages
 
+from utils import *
 def media_admin(request):
     return {'media':settings.MEDIA_URL,}
 
 
 def index(request):
     return render(request,'main/index.html')
-
+    
 def render_hero_section(request):
     hs=HeroSection.objects.get(id=1)
     return render(request,'partials/hero_section.html',{'hs':hs})
@@ -46,12 +47,23 @@ class ContactView(View):
                 text=cd['text']
             )
             #send success email
-            messages.success(request,'پیام با موفقیت ارسال شد')
+            send_email(
+            user_email=cd['email'],
+            user_name=cd['name'],
+            user_message=cd['text']
+        )
+
+
+            messages.success(request, 'Your message has been sent successfully. Thank you for reaching out!')
             return redirect('main:index')
 
-        messages.error(request,'اطلاعات وارد شده نامعتبر میباشد','danger')
-        return render(request,'partials/contact.html',{'i':form})
-    
+        messages.error(request, 'There was an error with your submission. Please check your information and try again.')
+        return render(request, 'partials/contact.html', {'i': form})
+        
 def get_all_projects(request):
     projects=Projects.objects.all()
     return render(request,'partials/projects.html',{'projects':projects})
+
+
+def handler404(request, exception):
+    return render(request, 'partials/404.html', status=404)
