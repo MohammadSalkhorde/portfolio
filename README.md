@@ -26,7 +26,7 @@ Built with **Django**, **HTML/CSS/JS**, and modern front-end libraries, it is re
 * **Backend:** Python, Django
 * **Frontend:** HTML5, CSS3, JavaScript, jQuery
 * **Libraries & Plugins:** Owl Carousel, ScrollReveal, Gumshoe
-* **Database:** SQLite (for development)
+* **Database:** MySQL
 
 ---
 
