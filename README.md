@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 <p align="center">
-  <img src="static/images/demo.png" alt="Portfolio Demo" width="800">
+  <img src="assets/demo.png" alt="Portfolio Demo" width="800">
 </p>
 
 This is a **personal portfolio website** showcasing my skills, projects, and contact information.
