@@ -6,6 +6,10 @@
 ![Django](https://img.shields.io/badge/Django-5.0-success?logo=django)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+<p align="center">
+  <img src="static/images/demo.png" alt="Portfolio Demo" width="800">
+</p>
+
 This is a **personal portfolio website** showcasing my skills, projects, and contact information.
 Built with **Django**, **HTML/CSS/JS**, and modern front-end libraries, it is responsive, supports dark mode, and features interactive modals for project previews.
 
@@ -82,21 +86,25 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Apply migrations (for Django backend)
+### 4️⃣ Configure environment variables
+
+Rename `.env.example` to `.env` and fill in your values before running the server.
+
+### 5️⃣ Apply migrations (for Django backend)
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5️⃣ Run the development server
+### 6️⃣ Run the development server
 
 ```bash
 python manage.py runserver
 ```
 
-> Local Development: http://127.0.0.1:8000/     
-> 🌐 Live Demo: https://mohammad-salkhorde.ir
+> Local Development: http://127.0.0.1:8000/  
+> 🌐 Live Demo: [https://mohammad-salkhorde.ir](https://mohammad-salkhorde.ir)
 
 ---
 
@@ -118,7 +126,6 @@ portfolio/
 ├── .gitignore            
 ├── README.md                   
 └── .env.example        
-
 ```
 
 ---
@@ -131,9 +138,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💼 Contact & Portfolio
 
-Hi, I'm **Mohammad Salkhorde** 👋
-**Python / Django Backend Developer** — building REST APIs and web applications.
-
+Hi, I'm **Mohammad Salkhorde** 👋  
+**Python / Django Backend Developer** — building REST APIs and web applications.  
 Open to **freelance** & **remote** opportunities.
 
 * **GitHub:** [https://github.com/MohammadSalkhorde](https://github.com/MohammadSalkhorde)
