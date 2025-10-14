@@ -118,13 +118,13 @@ portfolio/
 |   ├── portfolio/           
 │   ├── static/           
 │   ├── media/            
-│   ├── templates/  
-|   ├── requirements.txt                 
+│   ├── templates/                
 │   └── manage.py  
 │
 ├── venv/                 
 ├── .gitignore            
-├── README.md                   
+├── README.md    
+├── requirements.txt                  
 └── .env.example        
 ```
 
